@@ -3,7 +3,7 @@
 // массив с параметрами подключения к базе данных
 return [
   'host' => 'localhost',
-  'dbname' => 'wood-decor-mvc',
+  'dbname' => 'e-shop',
   'user' => 'root',
   'password' => ''
 ];
