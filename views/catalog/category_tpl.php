@@ -13,7 +13,8 @@
 							<div class="panel panel-default">
 								<div class="panel-heading">
 									<h4 class="panel-title">
-										<a href="/catalog/<?=$category['id']?>">
+										<a href="/catalog/<?=$category['id']?>"
+                                           class="<?php if($categoryId == $category['id']) echo 'active';?>">
 											<?=$category['name']?>
 										</a>
 									</h4>

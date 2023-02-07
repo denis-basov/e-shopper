@@ -13,8 +13,6 @@ class CatalogController
 		$categories = Category::getCategoriesList(); // получаем список категорий
 		$latestProducts = Product::getLatestProducts(); // получаем список товаров
 
-		echo 'каталог';
-
 		require(ROOT . '/views/catalog/index_tpl.php');
 
 		return true;
@@ -23,10 +21,8 @@ class CatalogController
 	// метод страницы категории каталога
 	public static function actionCategory($categoryId){
 
-		$categories = Category::getCategoriesList();
-		$categoryProducts = Product::GetProductsListByCategory($categoryId);
-
-		echo 'категория';
+		$categories = Category::getCategoriesList(); // получаем список категорий
+		$categoryProducts = Product::GetProductsListByCategory($categoryId); // получаем товары нужной категории
 
 		require(ROOT.'/views/catalog/category_tpl.php');
 

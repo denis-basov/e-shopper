@@ -34,4 +34,12 @@ class Product
                                 LIMIT ". self::SHOW_BY_DEFAULT)
 							->fetchAll(PDO::FETCH_ASSOC);
 	}
+
+	// получение одного товара по id
+  public static function getProductById($productId){
+
+		$db = DBConnect::getConnection();
+
+		return $db->query("SELECT * FROM product WHERE id=$productId")->fetch(PDO::FETCH_ASSOC);
+	}
 }
