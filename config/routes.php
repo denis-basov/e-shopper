@@ -1,6 +1,5 @@
 <?php
 
 return [
-  '' => 'site/index', // SiteController & actionIndex
-
+  '' => 'site/index', // SiteController & actionIndex - главная страница
 ];
