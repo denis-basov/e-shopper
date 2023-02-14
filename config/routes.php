@@ -1,11 +1,15 @@
 <?php
 
 return [
+	'product/([0-9+])' => 'product/view/$1', // просмотр товара детально - ProductController & actionView
 
-	'catalog/([0-9+])' => 'catalog/category/$1', // CatalogController & actionCategory - страница категории каталога
-	'catalog' => 'catalog/index', // CatalogController & actionIndex - главная страница каталога
+	'catalog' => 'catalog/index', // главная страница каталога - CatalogController & actionIndex
 
-  'product/([0-9+])' => 'product/view/$1', // ProductController & actionView - просмотр товара детально
+	'category/([0-9]+)/page-([0-9]+)' => 'catalog/category/$1/$2',// страница пагинации - CatalogController &
+	// actionCategory
+	'category/([0-9+])' => 'catalog/category/$1', // страница категории каталога - CatalogController & actionCategory
+
+
 
   '' => 'site/index', // SiteController & actionIndex - главная страница
 ];

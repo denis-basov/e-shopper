@@ -13,7 +13,7 @@
 							<div class="panel panel-default">
 								<div class="panel-heading">
 									<h4 class="panel-title">
-										<a href="/catalog/<?=$category['id']?>"
+										<a href="/category/<?=$category['id']?>"
                                            class="<?php if($categoryId == $category['id']) echo 'active';?>">
 											<?=$category['name']?>
 										</a>
@@ -85,7 +85,8 @@
 
 				</div><!--features_items-->
 
-
+                <!--  Постраничная навигация  -->
+                <?=$pagination->get();?>
 
 			</div>
 		</div>
